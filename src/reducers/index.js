@@ -4,10 +4,12 @@ import { combineReducers } from "redux"
 // imports 
 import counterReducer from "./counter"
 import loggedReducer from "./isLogged"
+import r_fetchMovies from "./r_fetchMovies"
 
 const rootReducer = combineReducers({
     counter: counterReducer,
-    isLogged: loggedReducer
+    isLogged: loggedReducer,
+    fetchMovies: r_fetchMovies
 })
 
 export default rootReducer

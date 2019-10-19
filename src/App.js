@@ -2,6 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from "react-redux"
 import { increment, decrement } from "./actions"
 
+// components
+import MovieList from "./components/MovieList"
 
 function App() {
   const counter = useSelector(state => state.counter)
@@ -14,7 +16,7 @@ function App() {
       <h2>Counter {counter}</h2>
       <button onClick={() => dispatch(increment(5))}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
-
+      <MovieList />
       {/* { isLogged ? <h3>Valuable info I shouldnt see</h3> : ""} */}
     </div>
   );
